@@ -1,19 +1,19 @@
 Feature: Login Functionality
 
-  @signup
+  @signin
   Scenario: Successful login with valid credentials
     Given user is on the login page
     When user enters valid username and password
     And clicks on login button
     Then user should be redirected to the dash board
 
-  @signup @signup_negative
+  @signin @signin_negative
   Scenario: Unsuccessful login with invalid credentials
     Given user is on the login page
     When user enters invalid username "sivanesh" and password "abcd@123"
     And clicks on login button
 
-  @signup_field_validation @signup
+  @signin_field_validation @signin
   Scenario Outline: Login with multiple users
     Given user is on the login page
     When user enters invalid username "<username>" and password "<password>"
